@@ -1,0 +1,32 @@
+<!-- pojistka/templates/pojistka/vytvorit_pojistku.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2 class="mb-4">Vytvořit pojistku</h2>
+
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    {{ form.typ_pojisteni|as_crispy_field }} {# Zobrazit typ pojisteni #}
+
+                    {{ form.predmet_pojisteni|as_crispy_field }} {# Zobrazit predmet_pojisteni #}
+                    
+                    {{ form.castka|as_crispy_field }}
+                    {{ form.datum_od|as_crispy_field }}
+                    {{ form.datum_do|as_crispy_field }}
+
+
+                    {# Skryté pole pro předání aktuálního uživatele #}
+                    <input type="hidden" name="user" value="{{ user.pk }}">
+                    <button type="submit" class="btn btn-primary">Vytvořit pojistku</button>
+                </form>
+
+                <br>
+            </div>
+        </div>
+    </div>
+{% endblock %}

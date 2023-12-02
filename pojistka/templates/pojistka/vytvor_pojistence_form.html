@@ -1,0 +1,15 @@
+<!-- vytvor_pojistence_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Vytvořit pojištěnce</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Vytvořit pojištěnce</button>
+  </form>
+  <br>
+  <a href="{% url 'seznam_pojistencu' %}">Zpět na seznam pojištěnců</a>  <!-- Nahraď 'seznam_pojistencu' názvem tvé cílové URL -->
+{% endblock %}
+
+

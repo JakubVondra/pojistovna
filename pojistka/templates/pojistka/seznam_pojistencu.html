@@ -1,0 +1,15 @@
+<!-- pojistka/templates/pojistka/seznam_pojistencu.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Seznam uživatelů</h2>
+  <ul>
+    {% for uzivatel in uzivatele %}
+        <li><a href="{% url 'uzivatel_detail' pk=uzivatel.pk %}">{{ uzivatel.jmeno }} {{ uzivatel.prijmeni }}<span class="email">email: {{ uzivatel.email }}</span></a></li>
+    {% endfor %}
+    
+    <hr>
+    <a href="{% url 'vytvor_pojistence_form' %}"><button type="button">Vytvořit pojištěnce</button></a>
+  
+  </ul>
+{% endblock %}

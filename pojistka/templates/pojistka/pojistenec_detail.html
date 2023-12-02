@@ -1,0 +1,36 @@
+<!-- pojistka/templates/pojistka/uzivatel_detail.html -->
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2 class="mb-4">Detail uživatele</h2>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p class="mb-2"><strong>Jméno:</strong> {{ uzivatel.jmeno }}</p>
+                        <p class="mb-2"><strong>Příjmení:</strong> {{ uzivatel.prijmeni }}</p>
+                        <p class="mb-2"><strong>Email:</strong> {{ uzivatel.email }}</p>
+                        <p class="mb-2"><strong>Telefoní číslo:</strong> {{ uzivatel.telefon }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-2"><strong>Adresa:</strong></p>
+                        <p class="mb-2">{{ uzivatel.mesto }}, {{ uzivatel.ulice }} {{ uzivatel.cislo }}, PSČ: {{ uzivatel.psc }}</p>
+                    </div>
+                </div>
+                
+                <!-- Další informace o uživateli... -->
+                <hr>
+
+                {% if user.is_admin %}
+                    <form method="POST">
+                        {% csrf_token %}
+                        <button name="edit" class="btn btn-primary">Upravit informace</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
