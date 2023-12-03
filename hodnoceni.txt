@@ -1,0 +1,15 @@
+Ceníme práci na projektu! 🏆 Prohlédli jsme si kód a máme k němu následující poznámky:
+
+1. Pojmenování identifikátorů - OK
+2. Dodržení principů SRP a SoC - OK
+3. Vhodný výběr datových typů - OK
+4. Formátování kódu - OK
+5. Duplicitní kód a nekonečné cykly - Bez nekonečných cyklů a duplicit, tj. OK
+6. Validace vstupních dat - OK
+7. Logičnost a složitost - OK
+8. Komentáře - Jsou pouze místy jako vysvětlivky kódu, ocenil bych spíše dokumentační komentáře dle normy, viz třeba https://realpython.com/documenting-python-code/
+9. Celkové hodnocení - Pokročilé zadání splněno bez větších výhrad.
+
+Doporučujeme případné výtky v kódu opravit, abyste jej mohli pak prezentovat budoucímu zaměstnavateli v co nejlepší kvalitě. 
+
+Pokud byste potřebovali s čímkoli pomoci, naplánujte si s námi konzultaci, rádi vám poradíme!
