@@ -23,3 +23,5 @@ Použité technologie
 Django: Webový framework pro tvorbu aplikací v jazyce Python.
 Django ORM: Objektově relační mapování pro práci s databází SQLite
 HTML/CSS/JavaScript/Bootstrap5: Technologie pro tvorbu uživatelského rozhraní.
+
+PS: nezapomenout dodělat grafiku a upravit vzhled stránky.
